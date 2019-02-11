@@ -1,0 +1,16 @@
+<div [hidden]="show" class="alert alert-success">
+  {{ name }} works!
+</div>
+<button #btn class="btn btn-danger" (click)="oppiste(btn)">
+  show
+</button>
+
+<div [style.backgroundColor]="couleur">
+  Bonjour
+</div>
+
+<input #input type="text" class="form-control" (change)="changeColor(input.value)">
+
+<button class="btn btn-success" (click)="setDefault()">Default color</button>
+
+<app-second></app-second>
