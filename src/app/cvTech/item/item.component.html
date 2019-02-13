@@ -1,3 +1,5 @@
-<li class="list-group-item">
-  item
+<li (click)="sendPersonne()" class="list-group-item">
+  <img  src="assets/img/{{personne.path}}"
+       alt="{{personne.firstname}} {{personne.name}}">
+  {{personne.firstname}} {{personne.name}}
 </li>

@@ -1,4 +1,4 @@
 <ol>
-  <app-item></app-item>
-  <app-item></app-item>
+  <app-item (personSent)="sendPersonne($event)" [personne]="personnes[0]"></app-item>
+  <app-item (personSent)="sendPersonne($event)" [personne]="personnes[1]"></app-item>
 </ol>
