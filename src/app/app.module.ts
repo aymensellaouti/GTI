@@ -12,6 +12,8 @@ import { ListeComponent } from './cvTech/liste/liste.component';
 import { DetailComponent } from './cvTech/detail/detail.component';
 import { ItemComponent } from './cvTech/item/item.component';
 import { CouleursComponent } from './directives/couleurs/couleurs.component';
+import { LampeComponent } from './directives/lampe/lampe.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { CouleursComponent } from './directives/couleurs/couleurs.component';
     ListeComponent,
     DetailComponent,
     ItemComponent,
-    CouleursComponent
+    CouleursComponent,
+    LampeComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<div class="lampe" [ngClass]="{
+allumer : eteinte
+}">
+  Lampe
+</div>
+
+<button (click)="eteinte= !eteinte" class="btn btn-dark">
+  Allumer/eteindre
+</button>
+
+<div appHighlight>
+  Test Directive
+</div>
