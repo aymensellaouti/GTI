@@ -14,6 +14,7 @@ import { ItemComponent } from './cvTech/item/item.component';
 import { CouleursComponent } from './directives/couleurs/couleurs.component';
 import { LampeComponent } from './directives/lampe/lampe.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { RainbowDirective } from './directives/rainbow.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     ItemComponent,
     CouleursComponent,
     LampeComponent,
-    HighlightDirective
+    HighlightDirective,
+    RainbowDirective
   ],
   imports: [
     BrowserModule,
