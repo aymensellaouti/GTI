@@ -1,0 +1,22 @@
+<div class="row">
+  <p [ngStyle]="{
+'color': color,
+'backgroundColor': background,
+'font-family': font,
+'font-size': taille
+}
+"
+  >
+    couleurs works!
+  </p>
+
+</div>
+<div class="row">
+  <input type="text" [(ngModel)]="color" class="form-control">
+  <input #mySize type="number" class="form-control" (change)="changeTaille(mySize.value)">
+  <select #myFont (change)="font = myFont.value" class="form-control">
+    <option value="verdana">Verdana</option>
+    <option value="arial">Arial</option>
+    <option value="garamond">Garamond</option>
+  </select>
+</div>
