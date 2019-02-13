@@ -13,4 +13,4 @@
 
 <button class="btn btn-success" (click)="setDefault()">Default color</button>
 
-<app-second></app-second>
+<app-second (sendDataToPere)="showMySonMessage($event)" [container]="'Bonjour'"></app-second>

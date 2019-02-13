@@ -25,5 +25,8 @@ export class FirstComponent implements OnInit {
   changeColor(couleur) {
     this.couleur = couleur;
   }
+  showMySonMessage(message) {
+    alert(message);
+  }
 
 }
