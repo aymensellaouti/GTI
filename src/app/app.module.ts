@@ -15,6 +15,8 @@ import { CouleursComponent } from './directives/couleurs/couleurs.component';
 import { LampeComponent } from './directives/lampe/lampe.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
+import {PremierService} from './service/premier.service';
+import { TodosComponent } from './todos/todos.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { RainbowDirective } from './directives/rainbow.directive';
     CouleursComponent,
     LampeComponent,
     HighlightDirective,
-    RainbowDirective
+    RainbowDirective,
+    TodosComponent
   ],
   imports: [
     BrowserModule,
