@@ -15,10 +15,12 @@ import { CouleursComponent } from './directives/couleurs/couleurs.component';
 import { LampeComponent } from './directives/lampe/lampe.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
-import {PremierService} from './service/premier.service';
 import { TodosComponent } from './todos/todos.component';
 import { EmbaucheComponent } from './cvTech/embauche/embauche.component';
 import { DefaultImagePipe } from './default-image.pipe';
+import { HeaderComponent } from './header/header.component';
+import {Routing} from './app.routing';
+import { AddPersonneComponent } from './cvTech/add-personne/add-personne.component';
 
 @NgModule({
   declarations: [
@@ -37,11 +39,14 @@ import { DefaultImagePipe } from './default-image.pipe';
     RainbowDirective,
     TodosComponent,
     EmbaucheComponent,
-    DefaultImagePipe
+    DefaultImagePipe,
+    HeaderComponent,
+    AddPersonneComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    Routing
   ],
   providers: [],
   bootstrap: [AppComponent]

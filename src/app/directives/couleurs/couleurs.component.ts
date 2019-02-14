@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TodoService} from '../../service/todo.service';
 import {Todo} from '../../Model/Todo';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-couleurs',
@@ -14,9 +15,18 @@ export class CouleursComponent implements OnInit {
   background = 'yellow';
   font = 'garamond';
   taille = '20px';
-  constructor(private todoService: TodoService) { }
+  constructor(
+    private todoService: TodoService,
+    private activatedRoute: ActivatedRoute
+    ) { }
 
   ngOnInit() {
+    this.activatedRoute.params.subscribe(
+      (mesParams) => {
+        console.log(mesParams);
+        this.color = mesParams['color'];
+      }
+    );
   }
   changeTaille(taille) {
     this.taille = taille + 'px';
