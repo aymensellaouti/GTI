@@ -14,5 +14,6 @@
 
   <button class="btn btn-primary"
           (click)="addPersonne(formulaire)"
+          [disabled]="!formulaire.valid"
   >Envoyer</button>
 </form>

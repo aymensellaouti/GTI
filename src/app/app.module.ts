@@ -21,6 +21,8 @@ import { DefaultImagePipe } from './default-image.pipe';
 import { HeaderComponent } from './header/header.component';
 import {Routing} from './app.routing';
 import { AddPersonneComponent } from './cvTech/add-personne/add-personne.component';
+import { LoginComponent } from './login/login.component';
+import { Erreur404Component } from './erreur404/erreur404.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { AddPersonneComponent } from './cvTech/add-personne/add-personne.compone
     EmbaucheComponent,
     DefaultImagePipe,
     HeaderComponent,
-    AddPersonneComponent
+    AddPersonneComponent,
+    LoginComponent,
+    Erreur404Component
   ],
   imports: [
     BrowserModule,
