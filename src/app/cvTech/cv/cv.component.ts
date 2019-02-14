@@ -9,9 +9,8 @@ import {PremierService} from '../../service/premier.service';
 })
 export class CvComponent implements OnInit {
   selectedPersonne: Personne;
-  constructor(private premierService: PremierService) { }
+  constructor() { }
   ngOnInit() {
-    this.premierService.sayHello();
   }
   getPersonne(personne) {
     this.selectedPersonne = personne;

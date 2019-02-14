@@ -17,6 +17,8 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import {PremierService} from './service/premier.service';
 import { TodosComponent } from './todos/todos.component';
+import { EmbaucheComponent } from './cvTech/embauche/embauche.component';
+import { DefaultImagePipe } from './default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { TodosComponent } from './todos/todos.component';
     LampeComponent,
     HighlightDirective,
     RainbowDirective,
-    TodosComponent
+    TodosComponent,
+    EmbaucheComponent,
+    DefaultImagePipe
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<div class="col-md-12 col-sm-12">
+<div class="col-md-12 col-sm-12" (selectCv)="getPersonne2($event)">
   <div *ngIf="personne" class="card-container">
     <div class="card">
       <div class="front">
@@ -6,7 +6,7 @@
           <img src="assets/images/rotating_card_thumb2.png">
         </div>
         <div class="user">
-          <img class="img-circle" src="assets/img/{{personne?.path}}">
+          <img class="img-circle" src="assets/img/{{personne?.path|defaultImage}}">
         </div>
         <div class="content">
           <div class="main">
@@ -52,6 +52,7 @@
           </div>
         </div>
         <div class="footer">
+          <button class="btn btn-success" (click)="embaucher(personne)">Embaucher</button>
           <div class="social-links text-center">
             <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
             <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
