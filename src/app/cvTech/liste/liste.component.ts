@@ -13,7 +13,14 @@ export class ListeComponent implements OnInit {
   constructor(private cvService: CvService) { }
 
   ngOnInit() {
-    this.personnes = this.cvService.getPersonnes();
+    this.cvService.getPersonnes().subscribe(
+      (personnes) => {
+        this.personnes = personnes;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
   sendPersonne(personne: Personne) {
     console.log('list', personne);

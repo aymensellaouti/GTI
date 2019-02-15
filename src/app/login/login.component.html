@@ -1,4 +1,7 @@
 <form #formulaire="ngForm">
+  <div *ngIf="showError" class="alert alert-danger">
+    Problème de connexion
+  </div>
   <label for="name">Email</label>
   <input id="name" type="email"
          required name="email"
@@ -12,10 +15,10 @@
   <label for="password">Password</label>
   <input id="password" type="password"
          required
-         name="pwd"
+         name="password"
          ngModel
          class="form-control"
-         minlength="6"
+         minlength="4"
          #pwd = 'ngModel'
   >
   <div *ngIf="pwd.invalid && pwd.touched" class="alert alert-danger">

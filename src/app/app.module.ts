@@ -23,6 +23,11 @@ import {Routing} from './app.routing';
 import { AddPersonneComponent } from './cvTech/add-personne/add-personne.component';
 import { LoginComponent } from './login/login.component';
 import { Erreur404Component } from './erreur404/erreur404.component';
+import { ObserveComponent } from './http/observe/observe.component';
+import {HttpClientModule} from '@angular/common/http';
+import { DetailCvComponent } from './cvTech/detail-cv/detail-cv.component';
+import { LiveSearchComponent } from './cvTech/live-search/live-search.component';
+import { CvDetailComponent } from './cvTech/cv-detail/cv-detail.component';
 
 @NgModule({
   declarations: [
@@ -45,11 +50,16 @@ import { Erreur404Component } from './erreur404/erreur404.component';
     HeaderComponent,
     AddPersonneComponent,
     LoginComponent,
-    Erreur404Component
+    Erreur404Component,
+    ObserveComponent,
+    DetailCvComponent,
+    LiveSearchComponent,
+    CvDetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     Routing
   ],
   providers: [],

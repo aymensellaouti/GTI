@@ -1,0 +1,15 @@
+<div class="row col-lg-12 col-sm-12">
+  <input
+    class="form-control"
+    type="search"
+    [(ngModel)]="search"
+    placeholder="Search"
+    aria-label="Search"
+    (keyup)="liveSearch()"
+  >
+</div>
+<ol *ngIf="personnes && search.length" class="list-group">
+  <li (click)="findDetails(personne.id)" *ngFor="let personne of personnes" class="list-group-item">
+    <img width="50px" height="50px" src="assets/img/{{personne.path}}"> {{personne.firstname}} {{personne.name}}
+  </li>
+</ol>

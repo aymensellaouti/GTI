@@ -1,19 +1,23 @@
 import {EventEmitter, Injectable} from '@angular/core';
 import {Personne} from '../../Model/Personne';
+import {HttpClient, HttpParams} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CvService {
+  apiLink = 'http://localhost:3000/api/personnes'
   personnes: Personne [];
-  constructor() {
-    this.personnes = [
-      new Personne(1, 'sellaouti', 'aymen', 36, 'enseignant', 'as.jpg', 7085595 ),
-      new Personne(2, 'sellaouti', 'skander', 0, 'bébé', 'skan.jpg', 1 ),
-      new Personne(3, 'sellaouti', 'mohamed', 22, 'bébé', '', 1 ),
-    ];
-  }
+  constructor(private http: HttpClient) {}
   getPersonnes() {
-    return this.personnes;
+    return this.http.get<Personne[]>(this.apiLink);
+  }
+  getByFilter(name) {
+    const filter = `{"where":{"name":{"like":"%${name}%"}}}`;
+    const params = new HttpParams().set('filter', filter);
+    return this.http.get<Personne[]>(this.apiLink, {params});
+  }
+  findById(id) {
+    return this.http.get<Personne>(this.apiLink + '/' + id);
   }
 }
