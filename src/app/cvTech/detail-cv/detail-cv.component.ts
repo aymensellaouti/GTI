@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Personne} from '../../Model/Personne';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {CvService} from '../service/cv.service';
 
 @Component({
@@ -12,7 +12,8 @@ export class DetailCvComponent implements OnInit {
   personne: Personne;
   constructor(
     private activatedRoute: ActivatedRoute,
-    private cvService: CvService
+    private cvService: CvService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -23,6 +24,17 @@ export class DetailCvComponent implements OnInit {
               this.personne = personne;
             }
           );
+      }
+    );
+  }
+  deletePerson(id) {
+    this.cvService.deletePersonne(id).subscribe(
+      (response) => {
+        this.router.navigate(['']);
+      },
+      (erreur) => {
+        alert('problème de suppression');
+        console.log(erreur);
       }
     );
   }

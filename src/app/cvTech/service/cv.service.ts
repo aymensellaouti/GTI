@@ -20,4 +20,7 @@ export class CvService {
   findById(id) {
     return this.http.get<Personne>(this.apiLink + '/' + id);
   }
+  deletePersonne(id) {
+    return this.http.delete(this.apiLink + '/' + id);
+  }
 }

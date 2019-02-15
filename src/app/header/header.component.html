@@ -20,13 +20,17 @@ navbar-light bg-light">
       <li class="nav-item">
         <a [routerLink]="['couleur']" routerLinkActive="active" class="nav-link" href="#">Couleur</a>
       </li>
-      <li class="nav-item">
+      <li *ngIf="authService.isLogged()" class="nav-item">
         <a [routerLink]="['cv/add']" routerLinkActive="active"
            class="nav-link" href="#">Ajout Personne</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['login']" routerLinkActive="active"
+        <a *ngIf="!authService.isLogged()" [routerLink]="['login']" routerLinkActive="active"
            class="nav-link" href="#">Login</a>
+      </li>
+      <li class="nav-item" (click)="logout()">
+        <a *ngIf="authService.isLogged()"
+           class="nav-link" href="#">Logout</a>
       </li>
     </ul>
   </div>

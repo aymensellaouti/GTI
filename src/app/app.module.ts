@@ -28,6 +28,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { DetailCvComponent } from './cvTech/detail-cv/detail-cv.component';
 import { LiveSearchComponent } from './cvTech/live-search/live-search.component';
 import { CvDetailComponent } from './cvTech/cv-detail/cv-detail.component';
+import {AuthentificationInterceptorProvider} from './interceptors/AuthentificationInterceptor';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,7 @@ import { CvDetailComponent } from './cvTech/cv-detail/cv-detail.component';
     HttpClientModule,
     Routing
   ],
-  providers: [],
+  providers: [AuthentificationInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
